@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histoire des Moteurs de Voitures</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header role="banner">
+        <img src="logo.jpg" alt="Logo du site" class="logo">
+        <nav role="navigation" aria-label="Navigation principale">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="sitemap.html">Plan du site</a></li>
+            </ul>
+        </nav>
+        <form id="searchForm" action="recherche.html" method="get" role="search" aria-label="Formulaire de recherche">
+            <label for="search">Rechercher :</label>
+            <input type="search" id="search" name="q" aria-label="Champ de recherche">
+            <button type="submit">Chercher</button>
+        </form>
+    </header>
+
+    <main role="main">
+        <section id="infoSection" aria-labelledby="mainHeading">
+            <h1 id="mainHeading">Histoire des Moteurs de Voitures</h1>
+            <p>Découvrez l'histoire fascinante des différentes cylindrées de moteurs de voitures, des premières
+                inventions aux technologies modernes.</p>
+            <article aria-labelledby="articleHeading1">
+                <h2 id="articleHeading1">Les Débuts des Moteurs</h2>
+                <p>Les premiers moteurs à combustion interne ont révolutionné le monde de l'automobile au 19ème siècle.
+                    Des inventeurs comme Nikolaus Otto, Karl Benz, et Rudolf Diesel ont joué un rôle crucial dans le
+                    développement de ces technologies.</p>
+            </article>
+            <article aria-labelledby="articleHeading2">
+                <h2 id="articleHeading2">L'Évolution des Cylindrées</h2>
+                <p>Au fil des années, les moteurs ont évolué pour devenir plus puissants, plus efficaces et plus
+                    écologiques. Les moteurs à quatre cylindres (inline-4), les moteurs à six cylindres en ligne
+                    (inline-6), les moteurs en V (V6, V8, V10, V12) et les moteurs en W (W8, W12, W16) sont devenus des
+                    standards dans l'industrie automobile.</p>
+            </article>
+            <article aria-labelledby="articleHeading3">
+                <h2 id="articleHeading3">Le Moteur VR6</h2>
+                <p>Le moteur VR6 est une conception unique développée par Volkswagen dans les années 1990. Contrairement
+                    aux moteurs en ligne ou en V traditionnels, le VR6 combine des éléments des deux dispositions pour
+                    créer un moteur plus compact. Les cylindres sont disposés en deux rangées décalées avec un angle
+                    très étroit, permettant ainsi d'intégrer le moteur dans des compartiments moteurs plus petits tout
+                    en conservant une cylindrée importante et une bonne performance.</p>
+            </article>
+            <article aria-labelledby="articleHeading4">
+                <h2 id="articleHeading4">Les Innovations Modernes</h2>
+                <p>À l'ère moderne, les moteurs électriques et les technologies hybrides ont commencé à remplacer les
+                    moteurs à combustion interne. Ces innovations offrent une efficacité énergétique supérieure et
+                    réduisent les émissions polluantes.</p>
+            </article>
+            <article aria-labelledby="articleHeading5">
+                <h2 id="articleHeading5">L'Avenir des Moteurs</h2>
+                <p>Avec les progrès continus dans les technologies de batteries et les moteurs électriques, l'avenir de
+                    l'automobile semble se diriger vers une réduction des émissions de carbone et une dépendance moindre
+                    aux combustibles fossiles.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2024 Histoire des Moteurs de Voitures. Tous droits réservés.</p>
+    </footer>
+
+    <script src="search.js"></script>
+</body>
+
+</html>

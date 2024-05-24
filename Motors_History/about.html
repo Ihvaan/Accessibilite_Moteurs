@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos du site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header role="banner">
+        <img src="logo.jpg" alt="Logo du site" class="logo">
+        <nav role="navigation" aria-label="Navigation principale">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="sitemap.html">Plan du site</a></li>
+                <li><a href="about.html">À propos</a></li>
+            </ul>
+        </nav>
+        <form id="searchForm" action="recherche.html" method="get" role="search" aria-label="Formulaire de recherche">
+            <label for="search">Rechercher :</label>
+            <input type="search" id="search" name="q" aria-label="Champ de recherche">
+            <button type="submit">Chercher</button>
+        </form>
+    </header>
+
+    <main role="main">
+        <section id="infoSection" aria-labelledby="mainHeading">
+            <h1 id="mainHeading">À propos du site</h1>
+            <p>Ce site est dédié à l'exploration et à la découverte de l'histoire fascinante des différentes cylindrées
+                de moteurs de voitures, des premières inventions aux technologies modernes.</p>
+
+            <article aria-labelledby="articleHeading1">
+                <h2 id="articleHeading1">Notre Mission</h2>
+                <p>Nous visons à fournir une ressource complète et accessible sur les moteurs de voitures, en détaillant
+                    leurs évolutions, leurs caractéristiques et leurs impacts sur l'industrie automobile.</p>
+            </article>
+
+            <article aria-labelledby="articleHeading2">
+                <h2 id="articleHeading2">Pourquoi ce site ?</h2>
+                <p>La passion pour l'automobile et l'ingénierie des moteurs nous a inspirés à créer ce site. Nous
+                    voulons partager cette passion avec d'autres passionnés et curieux du monde entier.</p>
+            </article>
+
+            <article aria-labelledby="articleHeading3">
+                <h2 id="articleHeading3">Accessibilité</h2>
+                <p>Nous nous engageons à rendre ce site accessible à tous, y compris aux personnes non voyantes. Nous
+                    avons intégré des fonctionnalités de navigation au clavier et des attributs ARIA pour améliorer
+                    l'expérience utilisateur.</p>
+            </article>
+
+            <article aria-labelledby="articleHeading4">
+                <h2 id="articleHeading4">Équipe</h2>
+                <p>Notre équipe est composée de passionnés de l'automobile, de développeurs web et de rédacteurs
+                    spécialisés. Ensemble, nous travaillons pour vous apporter des informations précises et
+                    intéressantes sur les moteurs de voitures.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2024 Histoire des Moteurs de Voitures. Tous droits réservés.</p>
+    </footer>
+
+    <script src="search.js"></script>
+</body>
+
+</html>

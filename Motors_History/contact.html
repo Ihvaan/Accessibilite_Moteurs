@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Histoire des Moteurs de Voitures</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img src="logo.jpg" alt="Logo du site" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="sitemap.html">Plan du site</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contactez-nous</h1>
+        <form action="submit-contact.php" method="post" onsubmit="return validateForm()">
+            <div>
+                <label for="nom">Nom (Obligatoire) :</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            <div>
+                <label for="prenom">Prénom (Obligatoire) :</label>
+                <input type="text" id="prenom" name="prenom" required>
+            </div>
+            <fieldset>
+                <legend>Adresse :</legend>
+                <div>
+                    <label for="adresse">N° et Rue :</label>
+                    <input type="text" id="adresse" name="adresse">
+                </div>
+                <div>
+                    <label for="code-postal">Code Postal :</label>
+                    <input type="text" id="code-postal" name="code-postal">
+                </div>
+                <div>
+                    <label for="ville">Ville :</label>
+                    <input type="text" id="ville" name="ville">
+                </div>
+            </fieldset>
+            <div>
+                <label for="telephone">Téléphone :</label>
+                <input type="tel" id="telephone" name="telephone">
+            </div>
+            <div>
+                <button type="submit">Envoyer</button>
+            </div>
+        </form>
+        <script>
+            function validateForm() {
+                let nom = document.getElementById('nom').value;
+                let prenom = document.getElementById('prenom').value;
+                if (nom === "" || prenom === "") {
+                    alert("Le nom et le prénom sont obligatoires.");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Histoire des Moteurs de Voitures. Tous droits réservés.</p>
+    </footer>
+</body>
+
+</html>

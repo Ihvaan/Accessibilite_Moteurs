@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats de la Recherche</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img src="logo.jpg" alt="Logo du site" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="sitemap.html">Plan du site</a></li>
+            </ul>
+        </nav>
+        <form id="searchForm" action="#" method="get" role="search">
+            <label for="search">Rechercher :</label>
+            <input type="search" id="search" name="q">
+            <button type="submit">Chercher</button>
+        </form>
+    </header>
+
+    <main>
+        <section id="searchResults">
+            <h1>Résultats de la Recherche</h1>
+            <p id="noResults">Aucun résultat trouvé pour votre recherche. Veuillez essayer avec d'autres mots-clés.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Histoire des Moteurs de Voitures. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Fonction pour obtenir le paramètre de recherche dans l'URL
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Fonction pour rediriger vers la page correspondant au mot-clé
+        function redirectToPage(keyword) {
+            switch (keyword) {
+                case 'v8':
+                    window.location.href = 'v8.html';
+                    break;
+                case 'v6':
+                    window.location.href = 'v6.html';
+                    break;
+                case 'i4':
+                    window.location.href = 'i4.html';
+                    break;
+                case 'electrique':
+                    window.location.href = 'electric.html';
+                    break;
+                case 'i6':
+                    window.location.href = 'i6.html';
+                    break;
+                case 'vr6':
+                    window.location.href = 'vr6.html';
+                    break;
+                case 'v10':
+                    window.location.href = 'v10.html';
+                    break;
+                case 'v12':
+                    window.location.href = 'v12.html';
+                    break;
+                case 'w16':
+                    window.location.href = 'w16.html';
+                    break;
+                case 'w8':
+                    window.location.href = 'w8.html';
+                    break;
+                case 'eb':
+                    window.location.href = 'eb.html';
+                    break;
+                case 'c3':
+                    window.location.href = 'c3.html';
+                    break;
+                case 'w12':
+                    window.location.href = 'w12.html';
+                    break;
+                default:
+                    // Aucune correspondance trouvée
+                    document.getElementById('searchResults').style.display = 'none';
+                    document.getElementById('noResults').style.display = 'block';
+            }
+        }
+
+        // Exécuter la redirection lors de la soumission du formulaire de recherche
+        document.getElementById('searchForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const keyword = document.getElementById('search').value.trim().toLowerCase();
+            redirectToPage(keyword);
+        });
+
+        // Redirection directe si le mot-clé est présent dans l'URL lors du chargement de la page
+        const searchQuery = getQueryParam('q');
+        if (searchQuery) {
+            redirectToPage(searchQuery.trim().toLowerCase());
+        }
+    </script>
+</body>
+
+</html>
